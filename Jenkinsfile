@@ -5,9 +5,9 @@ pipeline {
 
     stages {
         stage('Build Image') {
-                /* This builds the actual image; synonymous to
-                 * docker build on the command line */
             steps{
+                def base = docker.build("test-app")
+                base.push()
                 sh 'docker build -t test-app .'
                 sh 'echo "Image Successfully Built'
                 }
