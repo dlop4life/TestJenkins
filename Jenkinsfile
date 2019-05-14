@@ -1,14 +1,12 @@
 pipeline {
-    agent {
-        docker 'node'
-    }
+    agent none
     stages {
         stage('Build Image') {
             agent{
                 node
             }
 
-                node{
+                node {
                     def base
                     base = docker.build("test-app")
                     }
