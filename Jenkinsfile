@@ -9,7 +9,7 @@ pipeline {
                     def base
                     base = docker.build("test-app")
                     }
-                    sh 'echo "Image Built"'
+                    sh 'echo "WOOOOO Image Built"'
                 }
             }
 
