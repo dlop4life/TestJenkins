@@ -1,7 +1,7 @@
 pipeline {
     agent none
     stages {
-        node {
+        node ('mac') {
         stage('Build Image') {
             steps {
                 agent any
