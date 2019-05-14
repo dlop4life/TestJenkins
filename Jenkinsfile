@@ -6,9 +6,11 @@ pipeline {
     stages {
         stage('Build Image') {
             steps{
-                base = docker.build("test-app")
-                base.push()
-                sh 'docker build -t test-app .'
+                node{
+                    base = docker.build("test-app")
+
+                    }
+
                 sh 'echo "Image Successfully Built'
                 }
             }
