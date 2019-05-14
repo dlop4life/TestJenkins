@@ -2,7 +2,7 @@ pipeline {
     agent none
     stages {
         stage('Build Image') {
-            agent{
+            agent {
                 node
             }
 
@@ -11,10 +11,11 @@ pipeline {
                     base = docker.build("test-app")
                     }
 
-                sh 'echo "Image Successfully Built'
                 }
-
-
+            steps {
+                sh 'echo "Image Successfully Built'
+            }
+]
         stage('Run Image') {
             /* Ideally, we would run a test framework against our image.
              * For this example, we're using a Volkswagen-type approach ;-) */
