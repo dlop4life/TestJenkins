@@ -1,15 +1,17 @@
 pipeline {
     agent none
     stages {
+        node {
         stage('Build Image') {
             steps {
                 agent any
-                script {
+
                     def base
                     base = docker.build("test-app")
-                    }
+
                     sh 'echo "WOOOOO Image Built"'
                 }
+            }
             }
 
         stage('Run Image') {
