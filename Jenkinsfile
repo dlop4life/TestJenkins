@@ -1,4 +1,6 @@
 pipeline {
+    agent any
+
     stages {
         stage('Build Image') {
                 /* This builds the actual image; synonymous to
