@@ -2,13 +2,12 @@ pipeline {
     agent {
         docker 'node'
     }
-    def base
     stages {
         stage('Build Image') {
             steps{
                 node{
+                    def base
                     base = docker.build("test-app")
-
                     }
 
                 sh 'echo "Image Successfully Built'
