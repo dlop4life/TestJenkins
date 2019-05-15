@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent node
     stages {
         stage('Build Image') {
             steps {
