@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
+                    sh 'echo "Start building image"'
                     sh 'docker build test-app .'
                     sh 'echo "WOOOOO Image Built"'
 
