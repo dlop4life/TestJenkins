@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/testingcloudbuild/testapp', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['run', '-p', '80:3000', 'testApp']
+    args: ['run', '-p', '80:3000', 'testapp']
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy"]
 timeout: "1500s"
