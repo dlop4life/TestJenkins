@@ -3,9 +3,9 @@ steps:
     args: ['build', '-t', 'gcr.io/testingcloudbuild/testapp', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['run', '-p', '80:3000', 'gcr.io/testingcloudbuild/testapp:latest']
-  - name: "gcr.io/cloud-builders/gcloud"
-    args: ["app", "deploy"]
   - name: 'gcr.io/cloud-builders/curl'
     args: ['localhost:80']
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy"]
 images: ['gcr.io/testingcloudbuild/testapp:latest']
 timeout: "1500s"
