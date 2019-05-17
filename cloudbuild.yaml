@@ -2,6 +2,6 @@ steps:
   - name: "gcr.io/cloud-builders/gcloud"
     args: ["app", "deploy"]
   - name: 'gcr.io/cloud-builders/curl'
-    args: ['https://testingcloudbuild.appspot.com/']
+    args: ['https://testingcloudbuild.appspot.com2/']
 #images: ['gcr.io/testingcloudbuild/testapp:latest']
 timeout: "1500s"
