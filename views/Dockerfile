@@ -13,7 +13,7 @@ COPY package*.json ./
 # RUN npm ci --only=production
 
 # Bundle app source
-COPY . .
+COPY .. .
 
 EXPOSE 3000
 CMD [ "npm", "start", "-b", "0.0.0.0" ]
